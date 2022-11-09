@@ -64,7 +64,7 @@ function HeaderRender({heroTitle,heroImage}) {
 
 function NoFooterFound() {
     return (
-    <div className="adventure-detail">
+    <div className="product-detail">
         <Error errorMessage="Missing data, header could not be rendered." />
   </div>
   );

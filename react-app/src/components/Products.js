@@ -85,7 +85,7 @@ function ProductListItem({productTitle, slug, productImage, productModel, isProd
           </Link>
           <div className="adventure-item-length-price">
                     <div className="adventure-item-title">{productTitle}</div>
-                   <br/>   Category: {productCategory} <br/>
+                   <br/>   Category: {productCategory.toUpperCase()} <br/>
                   <div className="adventure-item-length">
                       Model: {productModel}
                   <br/> <b> {productStatus} </b> <br/>

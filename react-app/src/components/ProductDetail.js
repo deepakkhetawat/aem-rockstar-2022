@@ -54,8 +54,8 @@ function ProductDetail() {
       return <NoProductFound />;
     }
 
-    return (<div className="adventure-detail">
-        <button className="adventure-detail-close-button" onClick={() => navigate(-1)} >
+    return (<div className="product-detail">
+        <button className="product-detail-close-button" onClick={() => navigate(-1)} >
             <img className="Backbutton-icon" src={backIcon} alt="Return" />
         </button>
         <ProductDetailRender {...currentProduct} references={references}/>
@@ -96,8 +96,8 @@ function ProductDetailRender({productTitle,
             <div className="product-detail-content">
              <div className="productImage">   <img className="product-detail-primaryimage"
                     src={productImage._path} alt={productTitle} /> </div> <br/>
-            <div> <br/> <b>Product Details  </b>  <br/>   {mapJsonRichText(productDescription.json)} </div>
-            <div>  <br/>  <b>Product Features </b> <br/> {mapJsonRichText(productFeatures.json)} </div>  <br/>
+            <div> <br/> <b> Details  </b>  <br/>   {mapJsonRichText(productDescription.json)} </div>
+            <div>  <br/>  <b> Features </b> <br/> {mapJsonRichText(productFeatures.json)} </div>  <br/>
             <div>   <br/>   <br/>   <br/>  <br/> <b> Related Article  </b>  <a href="#"> {articleTitle}  </a> </div>
             </div>
              </>
@@ -107,8 +107,8 @@ function ProductDetailRender({productTitle,
 
 function NoProductFound() {
     return (
-    <div className="adventure-detail">
-        <Link className="adventure-detail-close-button" to={"/"}>
+    <div className="product-detail">
+        <Link className="product-detail-close-button" to={"/"}>
             <img className="Backbutton-icon" src={backIcon} alt="Return" />
         </Link>
         <Error errorMessage="Missing data, adventure could not be rendered." />

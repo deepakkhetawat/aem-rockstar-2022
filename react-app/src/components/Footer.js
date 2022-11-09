@@ -71,7 +71,7 @@ function FooterRender({footerTitle,footerContactUs}) {
 
 function NoFooterFound() {
     return (
-    <div className="adventure-detail">
+    <div className="product-detail">
         <Error errorMessage="Missing data." />
   </div>
   );

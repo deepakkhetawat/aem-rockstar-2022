@@ -95,7 +95,6 @@ function renderNodeList(childNodes, options) {
 
     if(childNodes && options) {
 childNodes.map((node, index) => {
-console.log("node98",node);
 });
 
         return childNodes.map((node, index) => {
@@ -115,14 +114,12 @@ console.log("node98",node);
  */
 function renderNode(node, options) {
     const {nodeMap, textFormat, headerStyle} = options;
-    console.log("nodeMap" , nodeMap);
     // null check
     if(!node || !options) {
         return null;
     }
 
     const children = node.content ? renderNodeList(node.content, options) : null;
-    console.log("children" , children);
     // special case for header, since it requires processing of header styles
     if(node.nodeType === 'header') {
         return nodeMap[node.nodeType]?.(node, children, headerStyle);

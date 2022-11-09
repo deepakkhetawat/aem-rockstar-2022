@@ -8,7 +8,7 @@ it.
 */
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 import {getAllProducts, getProductByCategory} from '../api/persistedQueries';
 import Error from './Error';
 import Loading from './Loading';
@@ -21,22 +21,17 @@ function Products({productCategory}) {
 
     const { locale } = useContext(LocaleContext);
     const [response, setResponse] = useState();
-    console.log("Products",locale);
-    console.log("productCategory",productCategory);
     useEffect(() => {
 
         // set response to null while fetching the new data (prompts loading icon)
         setResponse();
-console.log("30");
         // if an category is set (i.e "appliances", "wearables"...)
         if(productCategory && productCategory !== '') {
-                console.log("33");
             getProductByCategory(productCategory, locale)
                 .then(response => setResponse(response));
 
         }
         else {
-        console.log("38");
             getAllProducts(locale)
                 .then(response => setResponse(response));
         }
@@ -68,7 +63,6 @@ console.log("30");
 //         Price:    <CurrencyFormat value={productCentralInfoFragment.productPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} />
 function ProductListItem({productTitle, slug, productImage, productModel, isProductNew, productCategory}) {
     const { locale } = useContext(LocaleContext);
-  var productNew = false;
   var productStatus = "";
   if(isProductNew) {
   productStatus = "NEW"

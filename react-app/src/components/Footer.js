@@ -58,7 +58,6 @@ function Footer({response}) {
 //            <div className="footerLinks"> {mapJsonRichText(footerTitle.markDown)} </div>
     //        <div className="contactUsHeading2"> {mapJsonRichText(footerContactUs.contactUsDescription.json)} </div>
 function FooterRender({footerTitle,footerContactUs}) {
-    console.log("footerTitle",footerTitle);
     return (<>
             <div className="footerLinks">{mapJsonRichText(footerTitle.json)} </div>
 

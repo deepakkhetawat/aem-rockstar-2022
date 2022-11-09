@@ -8,7 +8,7 @@ it.
 */
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams} from "react-router-dom";
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 //import backIcon from '../images/icon-close.svg';
 import backIcon from '../images/back.png';
 import Error from './Error';
@@ -70,10 +70,9 @@ function ProductDetailRender({productTitle,
                                 productDescription,productFeatures,articleFragments}) {
 
      let articleTitle = "";
-    if( articleFragments[0] && articleFragments != "undefined") {
+    if( articleFragments[0] && articleFragments !== "undefined") {
       articleTitle = articleFragments[0].articleTitle;
     }
-  var productNew = false;
   var productStatus = "No";
   if(isProductNew) {
   productStatus = "Yes"

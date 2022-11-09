@@ -9,7 +9,8 @@ it.
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams} from "react-router-dom";
 import CurrencyFormat from 'react-currency-format';
-import backIcon from '../images/icon-close.svg';
+//import backIcon from '../images/icon-close.svg';
+import backIcon from '../images/back.png';
 import Error from './Error';
 import Loading from './Loading';
 import { mapJsonRichText } from '../utils/renderRichText';
@@ -99,7 +100,7 @@ function ProductDetailRender({productTitle,
             <div>  <br/>  <b>Product Features </b> <br/> {mapJsonRichText(productFeatures.json)} </div>  <br/>
             <div>   <br/>   <br/>   <br/>  <br/> <b> Related Article  </b>  <a href="#"> {articleTitle}  </a> </div>
             </div>
-            <hr/> </>
+             </>
     );
 }
 

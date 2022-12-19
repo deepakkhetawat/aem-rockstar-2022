@@ -78,9 +78,7 @@ class Aem: ObservableObject {
         }.resume();
     }
     
-    
-    /// # getProductBySlug()
-    /// 'slug`is a unique field, so this `adventureList` should have 0 or 1 results.
+
     /// For this func call to work, the `mec/products-header-footer-by-slug` query must be deployed to the AEM environment/service specified by the host
     func getProductBySlug(slug: String, completion: @escaping (Adventure) ->  ()) {
         let request = makeRequest(persistedQueryName: "mec/products-header-footer-by-slug", params: [ "slug": slug ] )
